@@ -1,0 +1,10 @@
+{
+  "appId": "com.fatecmc.ravensweets",
+  "appName": "Raven Sweets",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

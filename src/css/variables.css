@@ -1,0 +1,37 @@
+:root {
+  /* Base clara (ecommerce) */
+  --cor-fundo: #ffffff;
+  --cor-superficie: #f4f5fa;
+  --cor-borda: #dfe3ef;
+
+  /* Corvinal */
+  --cor-azul: #0e1a40;
+  --cor-azul-medio: #222f5b;
+  --cor-bronze: #946b2d;
+  --cor-bronze-clara: #f3ead8;
+
+  /* Halloween */
+  --cor-abobora: #c2570c;
+  --cor-abobora-clara: #fff1e6;
+
+  /* Texto */
+  --cor-texto: #151b3a;
+  --cor-texto-suave: #5b6485;
+  --cor-texto-sobre-escuro: #ffffff;
+
+  /* Tipografia (sem fontes externas, funciona offline no Capacitor) */
+  --fonte-titulo: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+  --fonte-corpo: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Espaçamentos */
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 12px;
+  --espaco-4: 16px;
+  --espaco-5: 20px;
+
+  --raio-m: 12px;
+  --raio-g: 20px;
+  --largura-max: 440px;
+  --altura-navbar: 64px;
+}

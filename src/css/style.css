@@ -1,0 +1,9 @@
+@import "./variables.css";
+@import "./base.css";
+@import "./navbar.css";
+@import "./components.css";
+@import "./paginas/inicio.css";
+@import "./paginas/cardapio.css";
+@import "./paginas/detalhe.css";
+@import "./paginas/carrinho.css";
+@import "./paginas/conta.css";

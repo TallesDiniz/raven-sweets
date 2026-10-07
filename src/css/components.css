@@ -1,0 +1,139 @@
+/* Card de produto compacto */
+.produto-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+  padding: var(--espaco-3);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-g);
+  text-align: left;
+  cursor: pointer;
+}
+
+.produto-card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--raio-m);
+  background: var(--cor-superficie);
+}
+
+.produto-card__nome {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cor-azul);
+}
+
+/* Substituto quando a imagem falha */
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: var(--espaco-2);
+  background: var(--cor-bronze-clara);
+  color: var(--cor-bronze);
+  border-radius: var(--raio-m);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Busca */
+.busca {
+  display: flex;
+}
+
+.busca .campo {
+  flex: 1;
+  border-radius: var(--raio-m) 0 0 var(--raio-m);
+  border-right: none;
+}
+
+.busca__botao {
+  width: 48px;
+  height: 44px;
+  flex-shrink: 0;
+  padding: 0;
+  border-radius: 0 var(--raio-m) var(--raio-m) 0;
+  font-size: 18px;
+}
+
+/* Seletor de quantidade */
+.seletor {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  padding: 2px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+}
+
+.seletor__btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--cor-superficie);
+  color: var(--cor-azul);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.seletor__qtd {
+  min-width: 24px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Botão de favoritar (♡/♥) */
+.favorito-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  color: var(--cor-azul);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.favorito-btn--ativo {
+  color: var(--cor-abobora);
+  border-color: var(--cor-abobora);
+}
+
+/* Posição do ♡ em cada tipo de card */
+.produto-card,
+.item-lista {
+  position: relative;
+}
+
+.produto-card > .favorito-btn {
+  position: absolute;
+  top: calc(var(--espaco-3) + var(--espaco-2));
+  right: calc(var(--espaco-3) + var(--espaco-2));
+}
+
+.item-lista > .favorito-btn {
+  position: absolute;
+  top: var(--espaco-2);
+  right: var(--espaco-2);
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+}
+
+/* Evita que o nome passe por baixo do ♡ */
+.item-lista__nome {
+  padding-right: 32px;
+}

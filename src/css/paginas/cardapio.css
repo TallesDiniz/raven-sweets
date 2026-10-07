@@ -1,0 +1,147 @@
+/* Topo com botão voltar */
+.topo__voltar {
+  background: none;
+  border: none;
+  color: var(--cor-texto-sobre-escuro);
+  font-size: 28px;
+  line-height: 1;
+  padding: 0 var(--espaco-2) 0 0;
+  cursor: pointer;
+}
+
+.topo__titulo {
+  flex: 1;
+  font-family: var(--fonte-titulo);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cor-bronze-clara);
+}
+
+/* Pílulas (categorias e ordenação) */
+.pilulas {
+  display: flex;
+  gap: var(--espaco-2);
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 calc(-1 * var(--espaco-4));
+  padding: 0 var(--espaco-4);
+}
+
+.pilulas::-webkit-scrollbar {
+  display: none;
+}
+
+.pilula {
+  flex-shrink: 0;
+  padding: var(--espaco-2) var(--espaco-4);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cor-azul);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pilula--ativa {
+  background: var(--cor-azul);
+  border-color: var(--cor-azul);
+  color: var(--cor-texto-sobre-escuro);
+}
+
+/* Resultado e ordenação */
+.resultado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+}
+
+.resultado__total {
+  font-size: 13px;
+  color: var(--cor-texto-suave);
+}
+
+.ordenacao {
+  display: flex;
+  gap: var(--espaco-2);
+}
+
+/* Lista de doces */
+.lista-produtos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+}
+
+.item-lista {
+  display: flex;
+  gap: var(--espaco-3);
+  padding: var(--espaco-3);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-m);
+  cursor: pointer;
+}
+
+.item-lista__img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: var(--raio-m);
+  background: var(--cor-superficie);
+}
+
+.item-lista .img-placeholder {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  aspect-ratio: auto;
+  font-size: 10px;
+}
+
+.item-lista__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+}
+
+.item-lista__nome {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cor-azul);
+}
+
+.item-lista__descricao {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--cor-texto-suave);
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.item-lista__rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-2);
+  margin-top: auto;
+}
+
+/* Nenhum resultado */
+.vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espaco-3);
+  padding: var(--espaco-5);
+  text-align: center;
+  color: var(--cor-texto-suave);
+}

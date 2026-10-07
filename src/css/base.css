@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-azul);
+  line-height: 1.25;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--cor-azul);
+}
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#app {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  background: var(--cor-fundo);
+}
+
+/* Container de cada tela */
+.tela {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-5);
+  min-height: 100dvh;
+  padding: var(--espaco-4);
+  padding-bottom: calc(var(--altura-navbar) + var(--espaco-5));
+}
+
+/* Topo da loja */
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+  background: var(--cor-azul);
+  color: var(--cor-texto-sobre-escuro);
+  padding: var(--espaco-3) var(--espaco-4);
+  padding-top: calc(var(--espaco-3) + env(safe-area-inset-top, 0px));
+}
+
+.topo__marca {
+  font-family: var(--fonte-titulo);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cor-bronze-clara);
+}
+
+/* Card de produto */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-g);
+  padding: var(--espaco-4);
+  box-shadow: 0 2px 8px rgba(14, 26, 64, 0.06);
+}
+
+/* Campos */
+.campo {
+  width: 100%;
+  height: 44px;
+  padding: 0 var(--espaco-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-m);
+  font-size: 14px;
+}
+
+.campo:focus {
+  outline: none;
+  border-color: var(--cor-bronze);
+}
+
+/* Botões */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espaco-3) var(--espaco-4);
+  background: var(--cor-azul);
+  color: var(--cor-texto-sobre-escuro);
+  border: 1px solid var(--cor-azul);
+  border-radius: var(--raio-m);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao--abobora {
+  background: var(--cor-abobora);
+  border-color: var(--cor-abobora);
+}
+
+.botao--contorno {
+  background: transparent;
+  color: var(--cor-azul);
+}
+
+/* Preço e selos */
+.preco {
+  color: var(--cor-abobora);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.selo {
+  display: inline-block;
+  padding: var(--espaco-1) var(--espaco-2);
+  background: var(--cor-bronze-clara);
+  color: var(--cor-bronze);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.selo--halloween {
+  background: var(--cor-abobora-clara);
+  color: var(--cor-abobora);
+}

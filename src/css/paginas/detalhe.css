@@ -1,0 +1,75 @@
+.detalhe__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--raio-g);
+  background: var(--cor-superficie);
+}
+
+.detalhe__cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espaco-2);
+}
+
+.detalhe__nome {
+  font-size: 24px;
+}
+
+.detalhe__preco {
+  font-size: 22px;
+}
+
+.detalhe__descricao {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--cor-texto-suave);
+}
+
+.detalhe__linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+}
+
+.detalhe__aviso {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-3);
+  padding: var(--espaco-3) var(--espaco-4);
+  background: var(--cor-bronze-clara);
+  color: var(--cor-bronze);
+  border-radius: var(--raio-m);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* display:flex acima anularia o atributo hidden */
+.detalhe__aviso[hidden] {
+  display: none;
+}
+
+.detalhe__aviso button {
+  background: none;
+  border: none;
+  color: var(--cor-bronze);
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.detalhe__imagem {
+  position: relative;
+}
+
+.detalhe__imagem .favorito-btn {
+  position: absolute;
+  top: var(--espaco-3);
+  right: var(--espaco-3);
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+}

@@ -1,0 +1,80 @@
+/* Banner */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espaco-3);
+  padding: var(--espaco-5);
+  background: linear-gradient(135deg, var(--cor-azul), var(--cor-azul-medio));
+  border-radius: var(--raio-g);
+}
+
+.banner h2 {
+  font-size: 24px;
+  color: var(--cor-bronze-clara);
+}
+
+.banner p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--cor-borda);
+}
+
+/* Seções */
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+}
+
+.secao__titulo {
+  font-size: 18px;
+}
+
+/* Categorias: flexbox em duas colunas, sem grid */
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+}
+
+.categoria {
+  flex: 1 1 calc(50% - var(--espaco-1));
+  max-width: calc(50% - var(--espaco-1));
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  padding: var(--espaco-3) var(--espaco-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-m);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cor-azul);
+  text-align: left;
+  cursor: pointer;
+}
+
+.categoria:active {
+  border-color: var(--cor-bronze);
+}
+
+/* Destaques: carrossel horizontal com flexbox */
+.destaques {
+  display: flex;
+  gap: var(--espaco-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  margin: 0 calc(-1 * var(--espaco-4));
+  padding: 0 var(--espaco-4) var(--espaco-2);
+}
+
+.destaques::-webkit-scrollbar {
+  display: none;
+}
+
+.destaques .produto-card {
+  flex: 0 0 150px;
+  scroll-snap-align: start;
+}
