@@ -3,19 +3,20 @@ import { formatarPreco } from "../utils/formatar.js";
 import { tratarImagensQuebradas } from "../utils/imagem.js";
 import { adicionar } from "../services/carrinho.js";
 import { botaoFavoritoHTML, ativarFavoritos } from "../utils/favoritar.js";
+import {icone} from "../utils/icones.js"
 
 const QUANTIDADE_MAXIMA = 20;
 
 function topo() {
   return `
     <div class="topo">
-      <button id="btn-voltar" class="topo__voltar" aria-label="Voltar">‹</button>
+      <button id="btn-voltar" class="topo__voltar" aria-label="Voltar">${icone("voltar", 26)}</button>
       <span class="topo__titulo">Detalhe do doce</span>
     </div>
   `;
 }
 
-// Volta para a tela anterior; sem histórico, cai no cardápio
+
 function voltar() {
   if (window.history.length > 1) {
     window.history.back();
@@ -64,16 +65,16 @@ function detalhe(app, params) {
       <div class="detalhe__linha">
         <span>Quantidade</span>
         <div class="seletor">
-          <button id="btn-menos" class="seletor__btn" aria-label="Diminuir">−</button>
+          <button id="btn-menos" class="seletor__btn" aria-label="Diminuir">${icone("menos", 16)}</button>
           <span id="qtd" class="seletor__qtd">1</span>
-          <button id="btn-mais" class="seletor__btn" aria-label="Aumentar">+</button>
+          <button id="btn-mais" class="seletor__btn" aria-label="Aumentar">${icone("mais", 16)}</button>
         </div>
       </div>
 
       <button id="btn-adicionar" class="botao botao--abobora"></button>
 
       <div id="aviso" class="detalhe__aviso" hidden>
-        <span>✓ Adicionado ao carrinho</span>
+        <span>${icone("check", 16)} Adicionado ao carrinho</span>
         <button id="btn-ir-carrinho">Ver carrinho</button>
       </div>
     </div>

@@ -6,7 +6,6 @@ import favoritos from "../paginas/favoritos.js";
 import conta from "../paginas/conta.js";
 
 
-// As demais telas entram aqui nas próximas etapas
 const mapaderotas = [inicio, cardapio, detalhe, carrinho, favoritos, conta];
 
 export { mapaderotas };

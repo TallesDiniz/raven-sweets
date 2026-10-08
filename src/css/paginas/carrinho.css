@@ -4,7 +4,6 @@
   gap: var(--espaco-3);
 }
 
-/* Itens do carrinho reaproveitam as classes .item-lista do cardápio */
 .item-lista--estatico {
   cursor: default;
 }

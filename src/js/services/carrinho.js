@@ -1,5 +1,5 @@
-// Array simples em memória: some ao recarregar o app (sem persistência)
-const itens = []; // { produto, quantidade }
+
+const itens = []; 
 
 function adicionar(produto, quantidade = 1) {
   const existente = itens.find((item) => item.produto.id === produto.id);

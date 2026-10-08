@@ -44,7 +44,7 @@ img {
   background: var(--cor-fundo);
 }
 
-/* Container de cada tela */
+
 .tela {
   display: flex;
   flex-direction: column;
@@ -54,7 +54,6 @@ img {
   padding-bottom: calc(var(--altura-navbar) + var(--espaco-5));
 }
 
-/* Topo da loja */
 .topo {
   display: flex;
   align-items: center;
@@ -73,7 +72,6 @@ img {
   color: var(--cor-bronze-clara);
 }
 
-/* Card de produto */
 .card {
   display: flex;
   flex-direction: column;
@@ -85,7 +83,6 @@ img {
   box-shadow: 0 2px 8px rgba(14, 26, 64, 0.06);
 }
 
-/* Campos */
 .campo {
   width: 100%;
   height: 44px;
@@ -101,7 +98,6 @@ img {
   border-color: var(--cor-bronze);
 }
 
-/* Botões */
 .botao {
   display: inline-flex;
   align-items: center;
@@ -125,7 +121,6 @@ img {
   color: var(--cor-azul);
 }
 
-/* Preço e selos */
 .preco {
   color: var(--cor-abobora);
   font-weight: 700;

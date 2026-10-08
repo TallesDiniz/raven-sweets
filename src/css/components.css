@@ -1,4 +1,3 @@
-/* Card de produto compacto */
 .produto-card {
   display: flex;
   flex-direction: column;
@@ -25,7 +24,6 @@
   color: var(--cor-azul);
 }
 
-/* Substituto quando a imagem falha */
 .img-placeholder {
   display: flex;
   align-items: center;
@@ -41,7 +39,6 @@
   text-align: center;
 }
 
-/* Busca */
 .busca {
   display: flex;
 }
@@ -61,7 +58,6 @@
   font-size: 18px;
 }
 
-/* Seletor de quantidade */
 .seletor {
   display: inline-flex;
   align-items: center;
@@ -91,7 +87,6 @@
   font-weight: 700;
 }
 
-/* Botão de favoritar (♡/♥) */
 .favorito-btn {
   display: flex;
   align-items: center;
@@ -112,7 +107,6 @@
   border-color: var(--cor-abobora);
 }
 
-/* Posição do ♡ em cada tipo de card */
 .produto-card,
 .item-lista {
   position: relative;
@@ -133,7 +127,50 @@
   font-size: 16px;
 }
 
-/* Evita que o nome passe por baixo do ♡ */
 .item-lista__nome {
   padding-right: 32px;
+}
+
+.icone {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.topo__marca {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+}
+
+.topo__voltar {
+  display: flex;
+  align-items: center;
+}
+
+.seletor__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.categoria .icone {
+  color: var(--cor-bronze);
+}
+
+.confirmacao__icone {
+  color: var(--cor-abobora);
+}
+
+.detalhe__aviso span {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+}
+
+.topo__logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }

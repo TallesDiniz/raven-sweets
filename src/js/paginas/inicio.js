@@ -3,14 +3,18 @@ import listaDeProdutos from "../dadosMockados/produtos.js";
 import { formatarPreco } from "../utils/formatar.js";
 import { tratarImagensQuebradas } from "../utils/imagem.js";
 import { botaoFavoritoHTML, ativarFavoritos } from "../utils/favoritar.js"
+import {icone} from "../utils/icones.js"
 
 function inicio(app) {
   const destaques = listaDeProdutos.filter((produto) => produto.destaque);
 
   app.innerHTML = `
     <div class="topo">
-      <span class="topo__marca">🦅 Raven Sweets</span>
-    </div>
+  <span class="topo__marca">
+    <img class="topo__logo" src="images/logo.png" alt="">
+    Raven Sweets
+  </span>
+</div>
 
     <div class="tela">
       <div class="busca">
@@ -21,7 +25,7 @@ function inicio(app) {
           placeholder="Buscar doces"
           aria-label="Buscar doces"
         >
-        <button id="btn-busca" class="botao busca__botao" aria-label="Buscar">→</button>
+        <button id="btn-busca" class="botao busca__botao" aria-label="Buscar">${icone("busca", 20)}</button>
       </div>
 
       <section class="banner">
@@ -38,7 +42,7 @@ function inicio(app) {
             .map(
               (categoria) => `
             <li class="categoria" data-categoria="${categoria.id}">
-              <span aria-hidden="true">${categoria.icone}</span>
+              ${icone(categoria.icone, 20)}
               <span>${categoria.nome}</span>
             </li>
           `,
@@ -116,6 +120,6 @@ function adicionarEvento(app) {
 export default {
   url: "#inicio",
   label: "início",
-  icon: "home",
+  icon: "casa",
   pagina: inicio,
 };

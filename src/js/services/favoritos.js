@@ -1,11 +1,10 @@
-// Array simples em memória: some ao recarregar o app (sem persistência)
 const ids = [];
 
 function ehFavorito(id) {
   return ids.includes(id);
 }
 
-// Liga/desliga o favorito e devolve o novo estado (true = favoritado)
+
 function alternar(id) {
   const posicao = ids.indexOf(id);
   if (posicao === -1) {

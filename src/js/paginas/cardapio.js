@@ -3,8 +3,9 @@ import listaDeCategorias from "../dadosMockados/categorias.js";
 import { formatarPreco } from "../utils/formatar.js";
 import { tratarImagensQuebradas } from "../utils/imagem.js";
 import { botaoFavoritoHTML, ativarFavoritos } from "../utils/favoritar.js"
+import {icone} from "../utils/icones.js"
 
-// Remove acentos e maiúsculas para a busca ("abobora" encontra "Abóbora")
+
 function normalizar(texto) {
   return texto
     .toLowerCase()
@@ -34,7 +35,7 @@ function ordenarLista(lista, ordem) {
   return copia;
 }
 
-// Monta a URL a partir dos filtros: mudar o hash re-renderiza a tela
+
 function irPara(categoria, busca, ordem) {
   const params = new URLSearchParams();
   if (categoria) params.set("categoria", categoria);
@@ -57,7 +58,7 @@ function cardapio(app, params) {
 
   app.innerHTML = `
     <div class="topo">
-      <button id="btn-voltar" class="topo__voltar" aria-label="Voltar">‹</button>
+      <button id="btn-voltar" class="topo__voltar" aria-label="Voltar">${icone("voltar", 26)}</button>
       <span class="topo__titulo">Cardápio</span>
     </div>
 
@@ -70,7 +71,7 @@ function cardapio(app, params) {
           placeholder="Buscar doces"
           aria-label="Buscar doces"
         >
-        <button id="btn-busca" class="botao busca__botao" aria-label="Buscar">→</button>
+        <button id="btn-busca" class="botao busca__botao" aria-label="Buscar">${icone("busca", 20)}</button>
       </div>
 
       <div class="pilulas">
@@ -145,7 +146,7 @@ function adicionarEvento(app, { categoria, busca, ordem }) {
   const botaoVoltar = document.getElementById("btn-voltar");
   const botaoLimpar = document.getElementById("btn-limpar");
 
-  // O valor é colocado via JS (e não no HTML) para evitar problemas com aspas
+  
   inputBusca.value = busca;
 
   botaoVoltar.addEventListener("click", () => {
@@ -189,6 +190,6 @@ function adicionarEvento(app, { categoria, busca, ordem }) {
 export default {
   url: "#cardapio",
   label: "cardápio",
-  icon: "cookie",
+  icon: "cupcake",
   pagina: cardapio,
 };

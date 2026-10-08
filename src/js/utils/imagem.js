@@ -1,4 +1,4 @@
-// Se a imagem não carregar (ex.: sem internet), mostra um quadrado com o nome do doce
+
 function tratarImagensQuebradas(container) {
   container.querySelectorAll("img").forEach((img) => {
     img.addEventListener(

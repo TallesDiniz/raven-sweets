@@ -1,8 +1,8 @@
 const usuario = {
-  nome: "Luna Ravena",
-  email: "luna.ravena@email.com",
+  nome: "Hermione Granger",
+  email: "hermione.granger@email.com",
   telefone: "(11) 91234-5678",
-  endereco: "Rua das Abóboras, 31 - São Paulo, SP",
+  endereco: "Rua dos Feiticeiros, 123, Bairro Mágico, Cidade Encantada",
   membroDesde: "Outubro de 2025",
 };
 

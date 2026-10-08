@@ -47,7 +47,7 @@
   font-weight: 600;
 }
 
-/* display:flex acima anularia o atributo hidden */
+
 .detalhe__aviso[hidden] {
   display: none;
 }

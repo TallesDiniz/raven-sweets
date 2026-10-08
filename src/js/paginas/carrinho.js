@@ -7,6 +7,7 @@ import {
 } from "../services/carrinho.js";
 import { formatarPreco } from "../utils/formatar.js";
 import { tratarImagensQuebradas } from "../utils/imagem.js";
+import {icone} from "../utils/icones.js"
 
 function carrinho(app) {
   renderizar(app, false);
@@ -20,7 +21,7 @@ function renderizar(app, pedidoFeito) {
   if (pedidoFeito) {
     conteudo = `
       <div class="confirmacao">
-        <span class="confirmacao__icone">🎃</span>
+        <span class="confirmacao__icone">${icone("abobora", 56)}</span>
         <h2>Pedido realizado!</h2>
         <p>Seus doces já estão sendo preparados.</p>
         <button id="btn-inicio" class="botao">Voltar ao início</button>
@@ -46,9 +47,9 @@ function renderizar(app, pedidoFeito) {
               <p class="preco">R$ ${formatarPreco(produto.preco)}</p>
               <div class="item-lista__rodape">
                 <div class="seletor">
-                  <button class="seletor__btn" data-acao="menos" data-id="${produto.id}" aria-label="Diminuir">−</button>
+                  <button class="seletor__btn" data-acao="menos" data-id="${produto.id}" aria-label="Diminuir">${icone("menos", 16)}</button>
                   <span class="seletor__qtd">${quantidade}</span>
-                  <button class="seletor__btn" data-acao="mais" data-id="${produto.id}" aria-label="Aumentar">+</button>
+                  <button class="seletor__btn" data-acao="mais" data-id="${produto.id}" aria-label="Aumentar">${icone("mais", 16)}</button>
                 </div>
                 <button class="item-carrinho__remover" data-acao="remover" data-id="${produto.id}">Remover</button>
               </div>
@@ -123,6 +124,6 @@ function adicionarEvento(app) {
 export default {
   url: "#carrinho",
   label: "carrinho",
-  icon: "shopping-basket",
+  icon: "sacola",
   pagina: carrinho,
 };

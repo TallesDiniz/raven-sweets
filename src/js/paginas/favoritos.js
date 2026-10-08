@@ -51,7 +51,6 @@ function favoritos(app) {
 
   tratarImagensQuebradas(app);
 
-  // Ao desfavoritar, a tela é montada de novo e o doce sai da lista
   ativarFavoritos(app, () => favoritos(app));
 
   app.querySelectorAll(".item-lista").forEach((item) => {
@@ -71,6 +70,6 @@ function favoritos(app) {
 export default {
   url: "#favoritos",
   label: "favoritos",
-  icon: "heart",
+  icon: "coracao",
   pagina: favoritos,
 };

@@ -1,4 +1,4 @@
-/* Banner */
+
 .banner {
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   color: var(--cor-borda);
 }
 
-/* Seções */
+
 .secao {
   display: flex;
   flex-direction: column;
@@ -31,7 +31,6 @@
   font-size: 18px;
 }
 
-/* Categorias: flexbox em duas colunas, sem grid */
 .categorias {
   display: flex;
   flex-wrap: wrap;
@@ -59,7 +58,6 @@
   border-color: var(--cor-bronze);
 }
 
-/* Destaques: carrossel horizontal com flexbox */
 .destaques {
   display: flex;
   gap: var(--espaco-3);
