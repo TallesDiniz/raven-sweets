@@ -1,8 +1,8 @@
 # 🦅 Raven Sweets
 
-Demonstração mobile de uma **doceria online** com tema de Halloween, inspirada nas cores da casa Corvinal (azul, bronze e um toque de abóbora). O app é uma SPA feita só com **HTML, CSS e JavaScript puros**, pensada para celular e executada na web.
+Demonstração mobile de uma **doceria online** para a matéria de dispositivos móveis da Fatec MC com tema de Harry Potter e Halloween, inspirada nas cores da casa Corvinal (azul, bronze e um toque de abóbora). O app é uma SPA feita só com **HTML, CSS e JavaScript puros**, pensada para celular e executada na web.
 
-> Projeto acadêmico e de demonstração. O tema é apenas inspirado em Harry Potter, sem qualquer afiliação com a Warner Bros., a J.K. Rowling ou seus detentores de direitos. Nenhuma arte oficial é usada.
+
 
 ---
 
@@ -130,6 +130,7 @@ raven-sweets/
 ├── package.json
 ├── vite.config.js
 ├── README.md
+├── .gitignore
 └── src/
     ├── index.html
     ├── css/
@@ -137,7 +138,7 @@ raven-sweets/
     │   ├── variables.css        # cores, fontes, espaçamentos
     │   ├── base.css             # reset, topo, cards, botões, campos
     │   ├── navbar.css
-    │   ├── componentes.css      # busca, cards, seletor, favorito, ícones
+    │   ├── components.css      # busca, cards, seletor, favorito, ícones
     │   └── paginas/
     │       ├── inicio.css
     │       ├── cardapio.css
@@ -173,7 +174,6 @@ raven-sweets/
     └── public/                  # copiado como está para o dist/
         └── images/
             ├── logo.png
-            ├── favicon.png
             └── produtos/        # fotos dos doces
 ```
 
@@ -336,6 +336,8 @@ Em um app nativo, o splash screen precisa ser escondido por código (`SplashScre
 - Dados e usuário são fictícios
 - Sem testes automatizados
 
-## Autor
+## Autores
 
+**João Pedro** · [github.com/docarmojoao4](https://github.com/docarmojoao4)
+**Paulo Lisboa** · [github.com/Pgustavols](https://github.com/Pgustavols)
 **Talles Diniz** · [github.com/TallesDiniz](https://github.com/TallesDiniz)
